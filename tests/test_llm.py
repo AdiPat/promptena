@@ -1,5 +1,8 @@
-from promptena.llm import LLM, LLMOptions
+from promptena.llm import LLM, LLMOptions, GenerateOptions
 import uuid
+import pytest
+import openai
+from pydantic import BaseModel
 
 
 def test_default_options():
@@ -28,44 +31,37 @@ def test_llm_initialization():
     assert llm.client
 
 
-# class TestLLMOptions(unittest.TestCase):
-#     def test_default_options(self):
-#         options = LLMOptions()
-#         self.assertEqual(options.model, "gpt-4o-mini")
-#         self.assertEqual(options.temperature, 0.5)
-#         self.assertFalse(options.verbose)
-#         self.assertIsInstance(uuid.UUID(options.llm_id), uuid.UUID)
-
-#     def test_custom_options(self):
-#         custom_id = str(uuid.uuid4())
-#         options = LLMOptions(
-#             model="custom-model", temperature=0.7, verbose=True, llm_id=custom_id
-#         )
-#         self.assertEqual(options.model, "custom-model")
-#         self.assertEqual(options.temperature, 0.7)
-#         self.assertTrue(options.verbose)
-#         self.assertEqual(options.llm_id, custom_id)
+def test_generate_text():
+    options = GenerateOptions(prompt="Generate 1 line of Lorem Ipsum text.")
+    llm_options = LLMOptions()
+    llm = LLM(llm_options)
+    result = llm.generate_text(options=options)
+    assert len(result) > 0
 
 
-# class TestLLM(unittest.TestCase):
-#     @patch.dict(os.environ, {"OPENAI_API_KEY": "test_key"})
-#     @patch("openai.Client")
-#     def test_llm_initialization(self, mock_openai_client):
-#         options = LLMOptions()
-#         llm = LLM(options)
-#         self.assertEqual(llm.options, options)
-#         self.assertTrue(llm.client)
-#         mock_openai_client.assert_called_once_with(api_key="test_key")
-
-#     @patch.dict(os.environ, {}, clear=True)
-#     def test_llm_initialization_without_api_key(self):
-#         options = LLMOptions()
-#         with self.assertRaises(ValueError) as context:
-#             LLM(options)
-#         self.assertEqual(
-#             str(context.exception), "OPENAI_API_KEY environment variable not set"
-#         )
+def test_invalid_model():
+    options = LLMOptions(model="invalid-model")
+    llm = LLM(options)
+    with pytest.raises(openai.APIError):
+        llm.generate_text(
+            options=GenerateOptions(prompt="Generate 1 line of Lorem Ipsum text.")
+        )
 
 
-# if __name__ == "__main__":
-#     unittest.main()
+class TestResponse(BaseModel):
+    text: str
+    author: str
+
+
+def test_generate_object():
+    options = GenerateOptions(
+        prompt="Generate 1 line of Lorem Ipsum text.",
+        response_schema=TestResponse,
+    )
+    llm_options = LLMOptions()
+    llm = LLM(llm_options)
+    result = llm.generate_object(options=options)
+    assert result.text
+    assert result.author
+    assert len(result.text) > 0
+    assert len(result.author) > 0
