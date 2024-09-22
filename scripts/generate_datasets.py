@@ -85,7 +85,17 @@ def write_dataset_to_file(dataset, format="json") -> None:
                 f"./datasets/{DATASET_FILE_NAME}.json"
             )
 
-            write_dataset_to_file(dataset, format="json")
+            # incase write with json was called before, don't add duplicate entries
+            new_entries = []
+
+            with open(f"./datasets/{DATASET_FILE_NAME}.json", "r") as f:
+                cur_all_entries = json.load(f)
+                for entry in dataset:
+                    if entry["prompt"] not in [e["prompt"] for e in cur_all_entries]:
+                        new_entries.append(entry)
+
+            write_dataset_to_file(new_entries, format="json")
+
             all_data = []
             with open(f"./datasets/{DATASET_FILE_NAME}.json", "r") as f:
                 all_data = json.load(f)
@@ -93,6 +103,7 @@ def write_dataset_to_file(dataset, format="json") -> None:
                 dict_writer = csv.DictWriter(f, fieldnames=all_data[0].keys())
                 dict_writer.writeheader()
                 dict_writer.writerows(all_data)
+                print("write_dataset: wrote", len(all_data), " rows to file. ")
 
             if not file_existed_previously:
                 os.remove(f"./datasets/{DATASET_FILE_NAME}.json")
