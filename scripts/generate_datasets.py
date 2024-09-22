@@ -2,6 +2,7 @@ import sys
 import os
 from dotenv import load_dotenv
 import traceback
+import csv
 
 load_dotenv()
 
@@ -52,7 +53,7 @@ def generate_dataset():
     return dataset
 
 
-def write_dataset_to_file(dataset, format="json"):
+def write_dataset_to_file(dataset, format="json") -> None:
     ## not validating data, assumes it's always updated and correct
     if len(dataset) == 0:
         print("No data to write to file.")
@@ -76,6 +77,20 @@ def write_dataset_to_file(dataset, format="json"):
             json.dump(all_data, f, indent=4)
 
         print("write_dataset: wrote", len(all_data), " rows to file. ")
+    if format == "csv":
+        try:
+            write_dataset_to_file(dataset, format="json")
+            all_data = []
+            with open(f"./datasets/{DATASET_FILE_NAME}.json", "r") as f:
+                all_data = json.load(f)
+            with open(f"./datasets/{DATASET_FILE_NAME}.csv", "w") as f:
+                dict_writer = csv.DictWriter(f, fieldnames=all_data[0].keys())
+                dict_writer.writeheader()
+                dict_writer.writerows(all_data)
+
+        except Exception as e:
+            print("write_dataset: failed to write to csv. ")
+            traceback.print_exc()
 
 
 def run():
