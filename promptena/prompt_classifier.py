@@ -6,6 +6,9 @@ from sklearn.svm import SVC
 from sklearn.tree import DecisionTreeClassifier
 from sklearn.feature_extraction.text import TfidfVectorizer
 import os
+import pandas as pd
+from .utils import load_dataset, split_dataset
+import numpy as np
 
 
 class PromptContextClassifier:
@@ -74,14 +77,31 @@ class PromptContextClassifier:
         else:
             self.model.fit(X_train_vec, y_train)
 
+    def train_from_stored_data(self) -> bool:
+        try:
+            df = load_dataset()
+            train_df, test_df = split_dataset(df)
+            X = train_df["prompt"].values
+            y = train_df["is_context_sufficient"].values
+            self.train(X, y)
+            return True
+        except Exception as e:
+            print("Error training model from stored data: ", e)
+            return False
+
     def predict(self, X_test):
         if not self.model:
             raise ValueError("Model not trained yet. Train a model or load one first.")
 
-        X_test_vec = self.vectorizer.transform(X_test)
         if self.model_type == "dnn":
-            return self.model.predict(X_test_vec.toarray())
+            if isinstance(X_test, str):
+                X_test = [X_test]
+            X_test = np.array(X_test, dtype=object)[:, np.newaxis]
+            probabilities = self.model.predict(X_test)
+            predictions = (probabilities >= 0.5).astype(int)
+            return predictions
         else:
+            X_test_vec = self.vectorizer.transform(X_test)
             return self.model.predict(X_test_vec)
 
     def save_model(self, file_path):
@@ -104,6 +124,12 @@ class PromptContextClassifier:
 
     def load_model(self, file_path):
         if self.model_type == "dnn":
-            self.model = tf.keras.models.load_model(file_path)
+            custom_objects = {
+                "TextVectorization": tf.keras.layers.TextVectorization,
+                "StringLookup": tf.keras.layers.StringLookup,
+            }
+            self.model = tf.keras.models.load_model(
+                file_path, custom_objects=custom_objects
+            )
         else:
             self.model, self.vectorizer = joblib.load(file_path)
