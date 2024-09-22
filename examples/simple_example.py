@@ -15,24 +15,35 @@ def run_model_example(model):
 
     print("Loading model...")
 
-    file_path = f"./models/{model}.pkl"
+    is_trained = classifier.train_from_stored_data()
 
-    if model == "dnn":
-        file_path = f"./models/{model}.keras"
-
-    classifier.load_model(file_path=file_path)
+    if not is_trained:
+        print("Model not trained. Training model from stored data.")
+        sys.exit(1)
 
     print("Model loaded.")
 
-    prompt = "What is the best feature of the Samsung Galaxy S21?"
+    prompts = [
+        "What is the best feature of the Samsung Galaxy S21?",
+        "What is the capital of France?",
+        "What is the time in New York?",
+        "What is the weather in London?",
+        "What is the core value of the company?",
+    ]
 
-    print("Prompt: ", prompt)
+    predictions = classifier.predict(prompts)
 
-    prediction = classifier.predict([prompt])
+    print("Predictions: ", predictions)
 
-    response = "Yes" if prediction[0] else "No"
+    for i in range(len(prompts)):
+        prompt = prompts[i]
+        prediction = predictions[i]
+        print("Prompts: ", prompt)
+        print("Prediction: ", prediction)
+        response = "Yes" if prediction[0] else "No"
+        print("Prediction: Has Enough Context?", response)
 
-    print("Prediction: Has Enough Context?", response)
 
+# run_model_example("svm")
 
-run_model_example("svm")
+run_model_example("dnn")
