@@ -33,6 +33,7 @@ def generate_dataset():
                 The prompt should be related to a task that a user would like to get help with.
                 The purpose of the prompt is that we want to train an ML model to determine if a prompt has enough context or not.
                 This is so that we can decide whether more context needs to be fetched from data storage systems or not.  
+                The generated prompt length can be between 1 sentence to 10 sentences. 
              """
 
     system_prompt = "You are a Synthetic Data Generation AI Agent. Generate high-quality and relevant synthetic data for the given task."
@@ -109,6 +110,7 @@ def run():
             "generate_datasets: writing dataset to file. ",
             {"rows_generated": len(dataset)},
         )
+        write_dataset_to_file(dataset=dataset, format="json")
         write_dataset_to_file(dataset=dataset, format="csv")
     except Exception as e:
         print("generate_datasets: script failed. ")
