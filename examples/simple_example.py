@@ -40,10 +40,16 @@ def run_model_example(model):
         prediction = predictions[i]
         print("Prompts: ", prompt)
         print("Prediction: ", prediction)
-        response = "Yes" if prediction[0] else "No"
-        print("Prediction: Has Enough Context?", response)
+        response = None
+
+        if model == "dnn":
+            response = "Yes" if prediction[0] else "No"
+        else:
+            response = "Yes" if prediction else "No"
+
+        print("Has Enough Context?", response)
 
 
-# run_model_example("svm")
+run_model_example("svm")
 
-run_model_example("dnn")
+# run_model_example("dnn")
