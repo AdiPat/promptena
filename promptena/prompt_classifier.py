@@ -75,6 +75,9 @@ class PromptContextClassifier:
             self.model.fit(X_train_vec, y_train)
 
     def predict(self, X_test):
+        if not self.model:
+            raise ValueError("Model not trained yet. Train a model or load one first.")
+
         X_test_vec = self.vectorizer.transform(X_test)
         if self.model_type == "dnn":
             return self.model.predict(X_test_vec.toarray())
