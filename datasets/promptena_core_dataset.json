@@ -1,0 +1,122 @@
+[
+    {
+        "prompt": "What steps should I take to improve my time management skills?",
+        "is_context_sufficient": false,
+        "reason": "The prompt lacks specific context about the user's current time management challenges or goals, which would help in providing a more tailored response.",
+        "confidence": 0.7
+    },
+    {
+        "prompt": "What are the key benefits of using cloud storage for personal files?",
+        "is_context_sufficient": false,
+        "reason": "The prompt lacks specific context about the user's needs or situation regarding cloud storage, making it difficult to determine if the answer will be relevant.",
+        "confidence": 0.7
+    },
+    {
+        "prompt": "What are the steps to reset my email password?",
+        "is_context_sufficient": false,
+        "reason": "The prompt lacks context about which email service is being referred to, making it insufficient for a specific answer.",
+        "confidence": 0.7
+    },
+    {
+        "prompt": "What are the key ingredients needed to make a classic Margherita pizza?",
+        "is_context_sufficient": true,
+        "reason": "The question is straightforward and can be answered with a short list of ingredients, providing sufficient context for the task.",
+        "confidence": 0.9
+    },
+    {
+        "prompt": "What are the key steps to create a budget for a small business?",
+        "is_context_sufficient": false,
+        "reason": "The prompt does not provide enough context about the specific type of business or any particular financial goals, which are essential for creating a tailored budget.",
+        "confidence": 0.7
+    },
+    {
+        "prompt": "What are the steps to reset my email password?",
+        "is_context_sufficient": false,
+        "reason": "The prompt lacks context about the specific email service provider, which is essential for providing accurate instructions.",
+        "confidence": 0.7
+    },
+    {
+        "prompt": "What is the best way to organize my daily tasks for maximum productivity?",
+        "is_context_sufficient": false,
+        "reason": "The prompt lacks specific details about the user's current task management methods, preferences, or challenges they face, which are necessary to provide tailored advice.",
+        "confidence": 0.85
+    },
+    {
+        "prompt": "What are the main ingredients needed to bake a chocolate cake?",
+        "is_context_sufficient": false,
+        "reason": "The prompt does not provide enough context regarding the type of chocolate cake or any specific dietary restrictions that might influence the answer.",
+        "confidence": 0.7
+    },
+    {
+        "prompt": "What are some effective strategies for improving time management skills?",
+        "is_context_sufficient": false,
+        "reason": "The prompt does not provide specific details about the user's current time management challenges or context, making it unclear if the strategies should be general or tailored to a particular situation.",
+        "confidence": 0.7
+    },
+    {
+        "prompt": "What are the steps to reset a forgotten password on a Windows 10 computer?",
+        "is_context_sufficient": false,
+        "reason": "The prompt does not provide sufficient context about the user's current situation or the specific type of account they are trying to reset, which could affect the steps needed.",
+        "confidence": 0.7
+    },
+    {
+        "prompt": "What are the steps to reset my password on the website?",
+        "is_context_sufficient": false,
+        "reason": "The prompt does not specify which website the user is referring to, making it unclear if the answer can be provided without additional context.",
+        "confidence": 0.7
+    },
+    {
+        "prompt": "What are the main ingredients needed to make a traditional Italian lasagna?",
+        "is_context_sufficient": false,
+        "reason": "The prompt lacks context about dietary restrictions, serving sizes, or specific variations of lasagna that the user might be interested in.",
+        "confidence": 0.7
+    },
+    {
+        "prompt": "What are the steps to reset my password on the website?",
+        "is_context_sufficient": false,
+        "reason": "The prompt lacks specific details about the website, which may be necessary for providing accurate instructions.",
+        "confidence": 0.7
+    },
+    {
+        "prompt": "What are the key steps to create a successful budget for a small business?",
+        "is_context_sufficient": false,
+        "reason": "The prompt does not provide enough context about the specific type of small business or any particular financial goals, making it challenging to determine the most relevant steps for budgeting.",
+        "confidence": 0.65
+    },
+    {
+        "prompt": "What are the steps to reset my email password?",
+        "is_context_sufficient": false,
+        "reason": "The prompt lacks context regarding the email service provider, which is necessary for accurate guidance.",
+        "confidence": 0.7
+    },
+    {
+        "prompt": "What are some effective strategies for improving time management skills?",
+        "is_context_sufficient": false,
+        "reason": "The prompt lacks specific context about the user's current time management challenges or goals, which would help in providing a more tailored response.",
+        "confidence": 0.75
+    },
+    {
+        "prompt": "What are the steps to reset my email password?",
+        "is_context_sufficient": true,
+        "reason": "The prompt is clear and specific, providing enough context for a user to understand what information is being requested.",
+        "confidence": 0.9
+    },
+    {
+        "prompt": "What are the steps to reset my password on the website?",
+        "is_context_sufficient": false,
+        "reason": "The prompt lacks specific information about which website the user is referring to, making it difficult to provide a precise answer.",
+        "confidence": 0.7
+    },
+    {
+        "prompt": "What are the key steps to create a budget for a small business?",
+        "is_context_sufficient": false,
+        "reason": "The prompt lacks specific details about the business type, size, or financial goals, which are crucial for providing a tailored budgeting approach.",
+        "confidence": 0.75
+    },
+    {
+        "prompt": "What are the key steps to create a budget plan for personal finances?",
+        "is_context_sufficient": false,
+        "reason": "The prompt asks for steps to create a budget plan but does not provide any context about the user's financial situation or specific goals, making it unclear if the answer will be relevant to the user's needs.",
+        "confidence": 0.7
+    }
+]
