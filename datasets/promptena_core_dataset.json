@@ -250,5 +250,257 @@
         "is_context_sufficient": false,
         "reason": "The prompt does not provide specific details about the type of job or the candidate's background, making it unclear if the answer would be relevant to the user's situation.",
         "confidence": 0.6
+    },
+    {
+        "prompt": "What are some effective strategies for improving time management skills?",
+        "is_context_sufficient": false,
+        "reason": "The prompt lacks specific context about the user's current time management challenges or goals, making it difficult to determine the most relevant strategies to suggest.",
+        "confidence": 0.7
+    },
+    {
+        "prompt": "Tell me something about John. Context: John is a 30 year old male who enjoys computer programming. He lives on Snow Island and often talks in Python. His sense of humour is outstanding.",
+        "is_context_sufficient": true,
+        "reason": "The prompt provides context on John",
+        "confidence": 0.95
+    },
+    {
+        "prompt": "What are the main steps involved in creating a budget for a small business? Please provide a brief overview of the key components that should be included.",
+        "is_context_sufficient": true,
+        "reason": "The prompt clearly specifies the task of creating a budget for a small business and asks for key components, providing sufficient context for understanding the request.",
+        "confidence": 0.9
+    },
+    {
+        "prompt": "What are the key steps involved in creating a successful marketing campaign for a new product launch? Please provide a brief overview of the process, including any important considerations or strategies that should be taken into account. Additionally, if there are specific metrics that should be tracked to measure the effectiveness of the campaign, please include those as well. The goal is to ensure that the campaign reaches the target audience effectively and generates a strong return on investment. It would be helpful to know about any common pitfalls to avoid during the campaign planning phase. If you have experience with digital marketing, feel free to share insights on how online platforms can be leveraged for maximum impact. Also, consider mentioning any tools or resources that can aid in the execution of the campaign. Your concise response will greatly assist in understanding the overall landscape of marketing strategies. Thank you!",
+        "is_context_sufficient": true,
+        "reason": "The prompt provides clear context about the task of creating a marketing campaign, outlining specific areas of interest and expectations for the response.",
+        "confidence": 0.95
+    },
+    {
+        "prompt": "What are the key steps to create a successful marketing plan for a new product launch? Please provide a brief overview of the essential components that should be included in the plan, such as market analysis, target audience identification, and promotional strategies. Additionally, mention any tools or resources that might be helpful in this process. This information would be beneficial for someone preparing to introduce a new product to the market. Your insights will help guide the development of a comprehensive marketing strategy.",
+        "is_context_sufficient": true,
+        "reason": "The prompt clearly outlines the task of creating a marketing plan and specifies the components to be addressed, providing sufficient context for the user to respond effectively.",
+        "confidence": 0.9
+    },
+    {
+        "prompt": "What are the key steps to create a budget for a small business? Please provide a brief outline of the process.",
+        "is_context_sufficient": true,
+        "reason": "The prompt clearly defines the task (creating a budget for a small business) and specifies the desired output (a brief outline), providing sufficient context for a short answer.",
+        "confidence": 0.9
+    },
+    {
+        "prompt": "What steps should I follow to create a budget for my monthly expenses? I have a fixed income and several recurring bills, including rent, utilities, and groceries. I want to ensure I have enough left over for savings and discretionary spending. Additionally, I am considering starting a side hustle to increase my income. Can you provide a simple outline or template to help me get started? Please keep it concise and actionable.",
+        "is_context_sufficient": true,
+        "reason": "The prompt provides specific details about the user's financial situation and goals, making it clear what information is needed without requiring additional context.",
+        "confidence": 0.95
+    },
+    {
+        "prompt": "What are the steps I need to follow to complete my project?",
+        "is_context_sufficient": false,
+        "reason": "The prompt does not specify the type of project or any relevant details about it, making it difficult to provide a specific answer.",
+        "confidence": 0.3
+    },
+    {
+        "prompt": "What are the steps to troubleshoot a slow internet connection? Can you provide specific tools or methods that can help diagnose the issue?",
+        "is_context_sufficient": false,
+        "reason": "The prompt lacks specific details about the user's internet setup or the symptoms they are experiencing, which are necessary for effective troubleshooting.",
+        "confidence": 0.7
+    },
+    {
+        "prompt": "What are the key steps to improve my time management skills? Please provide a brief overview of techniques or strategies that I can implement. I am looking for practical advice that I can start using immediately. Any specific tools or resources that you recommend would also be appreciated.",
+        "is_context_sufficient": false,
+        "reason": "The prompt does not specify the user's current time management challenges or goals, making it unclear what specific advice would be most relevant.",
+        "confidence": 0.75
+    },
+    {
+        "prompt": "What are the steps to troubleshoot a computer that won't turn on? Please provide a brief overview of the initial checks I should perform. I'm not sure if it's a hardware or software issue. Any guidance on how to differentiate between the two would be helpful.",
+        "is_context_sufficient": false,
+        "reason": "The prompt lacks specific details about the computer's symptoms or any prior troubleshooting steps taken, making it unclear what context is needed.",
+        "confidence": 0.7
+    },
+    {
+        "prompt": "What are some effective strategies for improving time management skills? Please provide a brief overview of techniques that can be applied in daily life. I'm looking for practical tips that I can implement immediately. Any advice would be appreciated!",
+        "is_context_sufficient": false,
+        "reason": "The prompt does not specify the user's current time management challenges or their specific goals, making it unclear what context is needed for tailored advice.",
+        "confidence": 0.7
+    },
+    {
+        "prompt": "What are the main steps to create a budget for a small business?",
+        "is_context_sufficient": false,
+        "reason": "The prompt does not specify the type of business or the specific financial aspects to consider, which limits the context needed for a comprehensive answer.",
+        "confidence": 0.7
+    },
+    {
+        "prompt": "I run an online subscription-based business that sells monthly fitness plans. Recently, we've been facing higher-than-usual churn rates. Our target demographic is people aged 25-40, and we've been promoting mostly through social media. We offer three tiers of subscriptions and have a free trial option. What are some retention strategies we can implement to reduce churn and improve customer loyalty?",
+        "is_context_sufficient": true,
+        "reason": "The prompt provides detailed information about the business model, target audience, and specific problem, allowing for a comprehensive response.",
+        "confidence": 0.95
+    },
+    {
+        "prompt": "Can you help me improve the copy for my e-commerce product descriptions?",
+        "is_context_sufficient": false,
+        "reason": "More information about the type of products, current copy, and target audience would be necessary for effective recommendations.",
+        "confidence": 0.75
+    },
+    {
+        "prompt": "We are a mid-sized tech company specializing in SaaS solutions for B2B clients. We\u2019re exploring ways to expand our market presence in Europe, where GDPR and other regional regulations play a major role. Currently, we have a small but growing customer base in Germany and France. Our marketing has mainly been focused on U.S. clients, and we\u2019re looking for advice on how to tailor our outreach and offerings to meet European market demands. What should be our next steps in terms of marketing, compliance, and product localization?",
+        "is_context_sufficient": true,
+        "reason": "The prompt provides ample context about the company\u2019s focus, challenges, and goals, allowing for detailed guidance.",
+        "confidence": 0.95
+    },
+    {
+        "prompt": "How do I calculate the LTV (Lifetime Value) of a customer?",
+        "is_context_sufficient": false,
+        "reason": "The prompt lacks information about the business model, pricing structure, and customer behavior.",
+        "confidence": 0.75
+    },
+    {
+        "prompt": "I own a small graphic design agency, and we've been getting a lot of requests for branding packages from startups lately. Most of these clients want a full suite of services, including logo design, social media assets, and website templates. We're struggling to price these packages effectively because we don't have much data on what startups are willing to pay. How can we develop a more structured pricing strategy for these projects?",
+        "is_context_sufficient": true,
+        "reason": "The prompt includes sufficient details about the business, clients, and pricing challenges to provide a comprehensive response.",
+        "confidence": 0.9
+    },
+    {
+        "prompt": "How do I optimize my AWS EC2 instance costs?",
+        "is_context_sufficient": false,
+        "reason": "The prompt lacks details about current usage, instance types, and business needs.",
+        "confidence": 0.7
+    },
+    {
+        "prompt": "Our healthcare startup is developing an AI-powered diagnostic tool aimed at general practitioners. We plan to use it to assist in diagnosing common conditions like diabetes, hypertension, and COPD. The tool will analyze patient records and provide diagnostic suggestions based on patterns in the data. What are the best practices to ensure compliance with healthcare regulations such as HIPAA while scaling our AI operations?",
+        "is_context_sufficient": true,
+        "reason": "The prompt provides sufficient context about the industry, use case, and regulations, allowing for a well-informed response.",
+        "confidence": 0.95
+    },
+    {
+        "prompt": "What are the best practices for setting up a continuous deployment pipeline for a SaaS application?",
+        "is_context_sufficient": true,
+        "reason": "The prompt is broad but clear, covering general best practices that apply to SaaS applications without needing additional details.",
+        "confidence": 0.85
+    },
+    {
+        "prompt": "I\u2019ve been running a clothing boutique for the last five years, and my business has grown significantly through local customers and word-of-mouth. However, my online store hasn\u2019t been getting much traction, despite efforts to improve our website and SEO. We\u2019ve added new features like a sizing guide, customer reviews, and free shipping for purchases over $50. Still, sales from the website are flat. How can I drive more traffic to my online store and convert visitors into buyers?",
+        "is_context_sufficient": true,
+        "reason": "The prompt offers clear details about the business, current strategies, and challenges, enabling targeted advice.",
+        "confidence": 0.9
+    },
+    {
+        "prompt": "We\u2019ve recently launched a new mobile game aimed at kids aged 8-12. The game includes educational content to help improve math and reading skills. Despite the engaging content, we\u2019ve seen lower-than-expected user retention and session duration. We\u2019ve run some A/B tests on the user interface, but it hasn't made much of a difference. Can you suggest other strategies to increase user engagement, retention, and overall satisfaction?",
+        "is_context_sufficient": true,
+        "reason": "The prompt gives enough details about the product, target audience, and current challenges to allow for detailed recommendations.",
+        "confidence": 0.9
+    },
+    {
+        "prompt": "What are the most important things to consider when scaling a startup?",
+        "is_context_sufficient": true,
+        "reason": "This is a broad question with enough scope to cover general aspects of scaling any startup.",
+        "confidence": 0.9
+    },
+    {
+        "prompt": "We are in the process of rebranding our financial advisory firm, and we want to understand how we can incorporate sustainability and environmental responsibility into our new brand identity. Our target market is primarily high-net-worth individuals who are increasingly conscious of ESG (Environmental, Social, and Governance) factors. What are some effective ways to align our services with sustainability, while maintaining our traditional values of trust and expertise?",
+        "is_context_sufficient": true,
+        "reason": "The prompt provides sufficient context about the target audience and branding goals, making it possible to offer comprehensive guidance.",
+        "confidence": 0.9
+    },
+    {
+        "prompt": "How do I create a KPI dashboard for my remote sales team?",
+        "is_context_sufficient": false,
+        "reason": "More details are needed about the type of data, sales objectives, and tools in use to provide specific advice.",
+        "confidence": 0.75
+    },
+    {
+        "prompt": "I recently opened a small coffee shop in a busy urban area. We focus on high-quality, locally sourced beans and cater to a wide range of customers, from office workers to college students. We\u2019re considering expanding to offer light lunch options like sandwiches and salads. What factors should we consider when deciding whether to expand our menu? How can we assess the potential impact on our current operations and customer experience?",
+        "is_context_sufficient": true,
+        "reason": "The prompt includes sufficient details about the business, customers, and expansion plans, allowing for a comprehensive response.",
+        "confidence": 0.9
+    },
+    {
+        "prompt": "Can you suggest ways to improve customer service for an online clothing store?",
+        "is_context_sufficient": false,
+        "reason": "The prompt needs more specifics about the current challenges, customer demographics, and service processes to give actionable advice.",
+        "confidence": 0.7
+    },
+    {
+        "prompt": "Our manufacturing business has been struggling with inventory management lately. We produce custom-made industrial equipment, and many of our components are sourced from international suppliers. Due to supply chain disruptions, we\u2019ve faced delays and stockouts, which have affected our delivery timelines. We\u2019ve been exploring solutions such as just-in-time inventory and better forecasting models, but we haven\u2019t found a good fit for our specific needs. What inventory management strategies would you recommend for a company like ours?",
+        "is_context_sufficient": true,
+        "reason": "The prompt provides enough context about the industry, specific challenges, and solutions already considered, allowing for a detailed response.",
+        "confidence": 0.95
+    },
+    {
+        "prompt": "What are some good frameworks for developing a real-time chat application?",
+        "is_context_sufficient": true,
+        "reason": "General frameworks for real-time chat apps can be discussed without needing further context.",
+        "confidence": 0.85
+    },
+    {
+        "prompt": "We\u2019re looking to improve the employee experience in our fast-growing company. We\u2019ve recently expanded from 50 to 200 employees, and we\u2019re starting to feel the strain on our internal processes. Our goal is to maintain a close-knit culture, but we also need to implement more structured processes to keep up with our growth. What are some strategies we can use to balance structure with culture as we continue to expand?",
+        "is_context_sufficient": true,
+        "reason": "The prompt provides sufficient detail about the company's situation and challenges, allowing for targeted advice.",
+        "confidence": 0.9
+    },
+    {
+        "prompt": "We are in the early stages of launching a crowdfunding campaign for a new line of eco-friendly kitchen products. Our products are made from biodegradable materials, and we believe they will appeal to environmentally conscious consumers. We\u2019re working on our pitch video and reward tiers, but we\u2019re unsure about the best marketing strategies to ensure our campaign reaches its funding goal. What are some effective ways to market a crowdfunding campaign for a product like ours?",
+        "is_context_sufficient": true,
+        "reason": "The prompt offers detailed information about the product, campaign stage, and target audience, allowing for tailored advice.",
+        "confidence": 0.9
+    },
+    {
+        "prompt": "Can you explain the impact of remote work on employee productivity in the tech industry? I'm particularly interested in how communication tools and team dynamics have changed since the shift to remote work. Also, if possible, could you provide examples of companies that have successfully adapted to this change?",
+        "is_context_sufficient": true,
+        "reason": "The prompt provides specific context regarding the impact of remote work on productivity, mentioning the tech industry, communication tools, and team dynamics, which allows for a focused response.",
+        "confidence": 0.95
+    },
+    {
+        "prompt": "Can you explain the differences between B2B and B2C marketing strategies? I am particularly interested in how the customer journey differs in each case. Additionally, what are some effective channels for each type of marketing?",
+        "is_context_sufficient": true,
+        "reason": "The prompt provides a clear comparison request between B2B and B2C marketing, specifying interest in customer journeys and marketing channels, which gives sufficient context for a detailed response.",
+        "confidence": 0.9
+    },
+    {
+        "prompt": "Can you explain the impact of remote work on employee productivity? I have noticed that my team seems to be more productive when working from home, but I'm curious if there are any studies or statistics that back this up. Additionally, are there specific factors that contribute to this increased productivity?",
+        "is_context_sufficient": true,
+        "reason": "The prompt provides specific details about the context of remote work and its impact on productivity, making it clear what information is needed.",
+        "confidence": 0.95
+    },
+    {
+        "prompt": "Can you provide an overview of the key financial metrics that a startup should focus on during its first year? Specifically, I'm interested in understanding how to measure cash flow, customer acquisition cost, and lifetime value of a customer. Additionally, what benchmarks should I aim for in these areas based on industry standards?",
+        "is_context_sufficient": true,
+        "reason": "The prompt clearly specifies the financial metrics of interest and provides context about the startup's first year, making it sufficient for an informed response.",
+        "confidence": 0.95
+    },
+    {
+        "prompt": "Can you explain the importance of cash flow management for small businesses? Specifically, how can it impact their ability to pay suppliers and employees?",
+        "is_context_sufficient": true,
+        "reason": "The prompt provides specific details about cash flow management and its implications for small businesses, making it clear and context-rich.",
+        "confidence": 0.95
+    },
+    {
+        "prompt": "What are the best marketing strategies for a new product launch?",
+        "is_context_sufficient": false,
+        "reason": "The prompt lacks specific details about the product, target audience, or market conditions, making it impossible to provide a tailored response.",
+        "confidence": 0.85
+    },
+    {
+        "prompt": "What are the best practices for improving employee engagement in a remote work environment?",
+        "is_context_sufficient": true,
+        "reason": "The prompt clearly specifies the topic and the context of remote work, allowing for a focused response.",
+        "confidence": 0.9
+    },
+    {
+        "prompt": "What are the best marketing strategies for increasing customer engagement?",
+        "is_context_sufficient": false,
+        "reason": "The prompt does not specify the industry or target audience, making it difficult to provide tailored strategies.",
+        "confidence": 0.7
+    },
+    {
+        "prompt": "What are the best practices for improving customer satisfaction in a retail store?",
+        "is_context_sufficient": false,
+        "reason": "The prompt lacks specific details about the retail store, such as its size, location, or target demographic, making it difficult to provide tailored advice.",
+        "confidence": 0.85
+    },
+    {
+        "prompt": "What are the best strategies for increasing customer engagement in a retail store?",
+        "is_context_sufficient": false,
+        "reason": "The prompt lacks specific details about the type of retail store, target audience, or current engagement strategies, making it difficult to provide a tailored response.",
+        "confidence": 0.85
     }
 ]
