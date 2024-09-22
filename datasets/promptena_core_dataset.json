@@ -118,5 +118,137 @@
         "is_context_sufficient": false,
         "reason": "The prompt asks for steps to create a budget plan but does not provide any context about the user's financial situation or specific goals, making it unclear if the answer will be relevant to the user's needs.",
         "confidence": 0.7
+    },
+    {
+        "prompt": "What are the main steps to create a budget for a small business?",
+        "is_context_sufficient": false,
+        "reason": "The prompt does not specify the type of business or the specific financial aspects to consider, which limits the context needed for a comprehensive answer.",
+        "confidence": 0.7
+    },
+    {
+        "prompt": "What are the key steps to create a budget for a small business?",
+        "is_context_sufficient": false,
+        "reason": "The prompt does not specify the type of small business or the specific financial goals, making it too vague to provide a tailored response.",
+        "confidence": 0.7
+    },
+    {
+        "prompt": "What are the key steps to create a budget for a small business?",
+        "is_context_sufficient": false,
+        "reason": "The prompt does not specify the type of small business or any particular financial goals, which may lead to varied interpretations of 'budget'.",
+        "confidence": 0.6
+    },
+    {
+        "prompt": "What are the main steps to create a budget plan for a small business?",
+        "is_context_sufficient": false,
+        "reason": "The prompt lacks context about the specific type of small business and any particular financial goals, making it insufficient for a detailed response.",
+        "confidence": 0.7
+    },
+    {
+        "prompt": "What are the key steps to create a successful marketing campaign for a new product launch?",
+        "is_context_sufficient": false,
+        "reason": "The prompt does not specify the type of product, target audience, or marketing channels, which are crucial for providing a tailored response.",
+        "confidence": 0.7
+    },
+    {
+        "prompt": "What are the steps to troubleshoot a Wi-Fi connection issue on my laptop?",
+        "is_context_sufficient": false,
+        "reason": "The prompt is vague and lacks specific details about the laptop model, operating system, or the nature of the Wi-Fi issue.",
+        "confidence": 0.7
+    },
+    {
+        "prompt": "What are the main ingredients needed to make a traditional Italian Margherita pizza?",
+        "is_context_sufficient": false,
+        "reason": "The prompt lacks context regarding dietary restrictions, cooking methods, or specific regional variations, which could affect the ingredients listed.",
+        "confidence": 0.7
+    },
+    {
+        "prompt": "What steps should I take to improve my time management skills for better productivity at work?",
+        "is_context_sufficient": false,
+        "reason": "The prompt lacks specific details about the user's current time management practices, challenges faced, or the work environment, making it difficult to provide tailored advice.",
+        "confidence": 0.75
+    },
+    {
+        "prompt": "What are the key steps to troubleshoot a slow internet connection at home?",
+        "is_context_sufficient": true,
+        "reason": "The prompt specifies a clear task (troubleshooting a slow internet connection) and indicates the expected outcome (key steps), providing enough context for a concise answer.",
+        "confidence": 0.9
+    },
+    {
+        "prompt": "What are the main steps involved in creating a budget for a small business?",
+        "is_context_sufficient": false,
+        "reason": "The prompt lacks specific details about the type of small business or any particular financial goals, making it unclear if the answer would be applicable to the user's situation.",
+        "confidence": 0.6
+    },
+    {
+        "prompt": "What are the main steps to create a budget for a small business?",
+        "is_context_sufficient": false,
+        "reason": "The prompt does not specify the type of business or the specific financial aspects to consider, which limits the context needed for a comprehensive answer.",
+        "confidence": 0.7
+    },
+    {
+        "prompt": "What are the key steps to create a budget for a small business?",
+        "is_context_sufficient": false,
+        "reason": "The prompt does not specify the type of small business or the specific financial goals, making it too vague to provide a tailored response.",
+        "confidence": 0.7
+    },
+    {
+        "prompt": "What are the key steps to create a budget for a small business?",
+        "is_context_sufficient": false,
+        "reason": "The prompt does not specify the type of small business or any particular financial goals, which may lead to varied interpretations of 'budget'.",
+        "confidence": 0.6
+    },
+    {
+        "prompt": "What are the main steps to create a budget plan for a small business?",
+        "is_context_sufficient": false,
+        "reason": "The prompt lacks context about the specific type of small business and any particular financial goals, making it insufficient for a detailed response.",
+        "confidence": 0.7
+    },
+    {
+        "prompt": "What are the key steps to create a successful marketing campaign for a new product launch?",
+        "is_context_sufficient": false,
+        "reason": "The prompt does not specify the type of product, target audience, or marketing channels, which are crucial for providing a tailored response.",
+        "confidence": 0.7
+    },
+    {
+        "prompt": "What are the steps to troubleshoot a Wi-Fi connection issue on my laptop?",
+        "is_context_sufficient": false,
+        "reason": "The prompt is vague and lacks specific details about the laptop model, operating system, or the nature of the Wi-Fi issue.",
+        "confidence": 0.7
+    },
+    {
+        "prompt": "What are the main ingredients needed to make a traditional Italian Margherita pizza?",
+        "is_context_sufficient": false,
+        "reason": "The prompt lacks context regarding dietary restrictions, cooking methods, or specific regional variations, which could affect the ingredients listed.",
+        "confidence": 0.7
+    },
+    {
+        "prompt": "What steps should I take to improve my time management skills for better productivity at work?",
+        "is_context_sufficient": false,
+        "reason": "The prompt lacks specific details about the user's current time management practices, challenges faced, or the work environment, making it difficult to provide tailored advice.",
+        "confidence": 0.75
+    },
+    {
+        "prompt": "What are the key steps to troubleshoot a slow internet connection at home?",
+        "is_context_sufficient": true,
+        "reason": "The prompt specifies a clear task (troubleshooting a slow internet connection) and indicates the expected outcome (key steps), providing enough context for a concise answer.",
+        "confidence": 0.9
+    },
+    {
+        "prompt": "What are the main steps involved in creating a budget for a small business?",
+        "is_context_sufficient": false,
+        "reason": "The prompt lacks specific details about the type of small business or any particular financial goals, making it unclear if the answer would be applicable to the user's situation.",
+        "confidence": 0.6
+    },
+    {
+        "prompt": "What are the main benefits of using renewable energy sources over fossil fuels?",
+        "is_context_sufficient": false,
+        "reason": "The prompt lacks context about the specific audience or application, making it unclear if the answer should be technical, educational, or policy-oriented.",
+        "confidence": 0.7
+    },
+    {
+        "prompt": "What are the key steps to effectively prepare for a job interview in the tech industry?",
+        "is_context_sufficient": false,
+        "reason": "The prompt does not provide specific details about the type of job or the candidate's background, making it unclear if the answer would be relevant to the user's situation.",
+        "confidence": 0.6
     }
 ]
