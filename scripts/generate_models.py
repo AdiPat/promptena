@@ -33,7 +33,7 @@ def generate_models() -> None:
         y = train_df["is_context_sufficient"].values
         classifier.train(X, y)
         if model_type == "dnn":
-            classifier.save_model(f"./models/{model_type}.h5")
+            classifier.save_model(f"./models/{model_type}.keras")
         else:
             classifier.save_model(f"./models/{model_type}.pkl")
         print(f"Model {model_type} trained and saved.")
