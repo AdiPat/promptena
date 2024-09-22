@@ -79,6 +79,11 @@ def write_dataset_to_file(dataset, format="json") -> None:
         print("write_dataset: wrote", len(all_data), " rows to file. ")
     if format == "csv":
         try:
+            # check if json file exists
+            file_existed_previously = os.path.exists(
+                f"./datasets/{DATASET_FILE_NAME}.json"
+            )
+
             write_dataset_to_file(dataset, format="json")
             all_data = []
             with open(f"./datasets/{DATASET_FILE_NAME}.json", "r") as f:
@@ -87,6 +92,9 @@ def write_dataset_to_file(dataset, format="json") -> None:
                 dict_writer = csv.DictWriter(f, fieldnames=all_data[0].keys())
                 dict_writer.writeheader()
                 dict_writer.writerows(all_data)
+
+            if not file_existed_previously:
+                os.remove(f"./datasets/{DATASET_FILE_NAME}.json")
 
         except Exception as e:
             print("write_dataset: failed to write to csv. ")
@@ -101,7 +109,7 @@ def run():
             "generate_datasets: writing dataset to file. ",
             {"rows_generated": len(dataset)},
         )
-        write_dataset_to_file(dataset=dataset)
+        write_dataset_to_file(dataset=dataset, format="csv")
     except Exception as e:
         print("generate_datasets: script failed. ")
         traceback.print_exc()
