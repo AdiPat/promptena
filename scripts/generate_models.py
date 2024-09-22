@@ -11,6 +11,8 @@ from sklearn.model_selection import train_test_split
 
 def load_dataset() -> pd.DataFrame:
     df = pd.read_csv("./datasets/promptena_core_dataset.csv")
+    # convert boolean value to int
+    df["is_context_sufficient"] = df["is_context_sufficient"].astype(int)
     return df
 
 
